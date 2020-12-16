@@ -1,0 +1,18 @@
+syntax = "proto3";
+package projectdemo.v1;
+
+
+//demo 请求
+message ProjectDemoRequest{
+  string name = 1;
+}
+
+//demo 响应
+message ProjectDemoResponse{
+  string message =1;
+}
+
+// demo 接口
+service ProjectDemo{
+  rpc HealthCheck (ProjectDemoRequest) returns (ProjectDemoResponse) {}
+}
